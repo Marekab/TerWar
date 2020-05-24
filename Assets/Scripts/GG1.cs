@@ -49,7 +49,7 @@ public class  GG1: MonoBehaviour
             Flip();
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-        print(isGrounded);
+        //print(isGrounded);
         anim.SetBool("Ground", isGrounded);
 
         anim.SetFloat("vSpeed", rigid.velocity.y);

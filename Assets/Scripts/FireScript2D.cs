@@ -15,6 +15,8 @@ public class FireScript2D : MonoBehaviour
 	// ограничение вращения
 	public float minAngle = -40;
 	public float maxAngle = 40;
+    [Space]
+    public Animator animator;
 
 	private float curTimeout;
 	private int invert;
@@ -37,14 +39,16 @@ public class FireScript2D : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetButton("Fire"))
-		{
-			Fire();
-		}
-		else
-		{
-			curTimeout = 100;
-		}
+        if (Input.GetButton("Fire")
+            && animator.GetBool("Ground")
+            && animator.GetFloat("Speed") < 0)
+        {
+            Fire();
+        }
+        else
+        {
+            curTimeout = 100;
+        }
 
 		if (zRotate) SetRotation();
 

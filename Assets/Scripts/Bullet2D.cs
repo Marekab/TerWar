@@ -19,7 +19,10 @@ public class Bullet2D : MonoBehaviour
 			switch (coll.tag)
 			{
 				case "Enemy_1":
-					// что-то...
+                    {
+                        // что-то...
+                        Destroy(coll.gameObject);
+                    }
 					break;
 				case "Enemy_2":
 					// что-то еще...

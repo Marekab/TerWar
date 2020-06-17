@@ -13,9 +13,9 @@ public class Bot6 : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (collision.gameObject.name != "Layer2") SceneManager.LoadScene(8);
+            if (collision.gameObject.name != "Layer2") SceneManager.LoadScene(7);
         }
     }
     // Update is called once per frame

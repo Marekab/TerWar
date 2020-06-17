@@ -15,7 +15,7 @@ public class Bot3 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (collision.gameObject.name != "Layer2") SceneManager.LoadScene(5);
+            if (collision.gameObject.name != "Layer2") SceneManager.LoadScene(4);
         }
     }
     // Update is called once per frame
